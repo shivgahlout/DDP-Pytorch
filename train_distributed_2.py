@@ -33,7 +33,7 @@ def main():
     parser.add_argument("--local_rank", type=int, default=-1, help="local_rank for distributed training on gpus")
     args = parser.parse_args()
 
-    os.environ['MASTER_ADDR'] = '192.168.29.199'
+    os.environ['MASTER_ADDR'] = '19.16.19.19' ##enter server address here
     os.environ['MASTER_PORT'] = '8888'
 
     dist.init_process_group(backend='nccl', init_method='env://')
